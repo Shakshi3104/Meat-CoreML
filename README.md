@@ -1,11 +1,17 @@
-#  Classifying Image with Vision, Core ML and SwiftUI
+# Meat
 
-Preprocess photos using the Vision framework and classify them with a Core ML model.
+**Meat** is the app to classify meat parts from raw meat images.
 
-This code is a rewritten version of the [sample code provided by Apple](https://developer.apple.com/documentation/vision/classifying_images_with_vision_and_core_ml) using SwiftUI.
+It is based on the [Vision and Core ML sample code provided by Apple](https://developer.apple.com/documentation/vision/classifying_images_with_vision_and_core_ml) and a [rewritten version with SwiftUI](https://github.com/Shakshi3104/Vision-ML-SwiftUI)
 
-## Getting Started
+<p aline="center">
+  <img src="screenshots.png" width=512>
+</p>
 
-This sample code project runs on iOS 14+. However, you can also use Vision and Core ML in your own apps on macOS 10.13, iOS 11, or tvOS 11.
+## Requirements
 
-For more information on how to use Vision, please see Apple's documentation: [Classifying Images with Vision and Core ML](https://developer.apple.com/documentation/vision/classifying_images_with_vision_and_core_ml)
+- iOS 14.0+
+
+## Model Training
+
+The model used in this app was trained using Create ML.
