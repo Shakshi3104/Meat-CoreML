@@ -18,6 +18,7 @@ struct RakutenRecipeItem {
 class RakutenRecipeSearcher: ObservableObject {
     
     @Published var rakutenRecipeItems: [RakutenRecipeItem] = []
+    @Published var firstRakutenRecipeItem: RakutenRecipeItem = RakutenRecipeItem(recipeTitle: "🥩", recipeUrl: "🥩", foodImageUrl: "🥩")
     
     func search(categoryID: String){
         DispatchQueue.main.async {
@@ -46,6 +47,13 @@ class RakutenRecipeSearcher: ObservableObject {
                             
                             DispatchQueue.main.async {
                                 self.rakutenRecipeItems.append(recipeItem)
+                            }
+                        }
+                        
+                        
+                        if let firstRakutenRecipeItem = self.rakutenRecipeItems.first {
+                            DispatchQueue.main.async {
+                                self.firstRakutenRecipeItem = firstRakutenRecipeItem
                             }
                         }
                     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageClassificationView: View {
     @State private var isPresented = false
+    @State private var isPresentedRecipe = false
     @State private var sourceType = UIImagePickerController.SourceType.photoLibrary
     @State private var image: UIImage?
     
@@ -46,12 +47,16 @@ struct ImageClassificationView: View {
                         Button(action: {
                             print("Searching...")
                             rakutenRecipeSearcher.search(categoryID: self.classification.classificationMeatPart.rakutenRecipeCategoryID)
+                            self.isPresentedRecipe.toggle()
                         }, label: {
                             Image(systemName: "magnifyingglass")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .padding(5)
+                        })
+                        .sheet(isPresented: $isPresentedRecipe, content: {
+                            Text(rakutenRecipeSearcher.firstRakutenRecipeItem.recipeTitle)
                         })
                     }
                 }
