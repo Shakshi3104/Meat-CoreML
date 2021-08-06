@@ -16,6 +16,7 @@
 		CE484A36269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */; };
 		CEBAE0F8269ABFF4002FADAF /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBAE0F7269ABFF4002FADAF /* screenshots.png */; };
+		CEC9624D26BD07DD00B05524 /* MeatPartUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CE484A39269AB2E600291EA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RawMeatClassifier.mlmodel; sourceTree = "<group>"; };
 		CEBAE0F7269ABFF4002FADAF /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
+		CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatPartUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				CE484A31269A962800291EA3 /* ImageClassificationView.swift */,
 				CE484A33269AA5C900291EA3 /* ImageClassification.swift */,
 				CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */,
 			);
 			path = Meat;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE484A25269A95A000291EA3 /* ContentView.swift in Sources */,
+				CEC9624D26BD07DD00B05524 /* MeatPartUtilities.swift in Sources */,
 				CE484A23269A95A000291EA3 /* MeatApp.swift in Sources */,
 				CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */,
 				CE484A32269A962800291EA3 /* ImageClassificationView.swift in Sources */,

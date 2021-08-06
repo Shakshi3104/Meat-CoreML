@@ -74,11 +74,21 @@ class ImageClassification: ObservableObject {
             } else {
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(2)
-                let descriptions = topClassifications.map { classification in
-                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                   return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                
+                print("\(topClassifications[0].identifier) \(topClassifications[0].confidence)")
+                
+                if topClassifications[0].confidence >= 0.9 {
+                    self.classificationLabel = "It is \(topClassifications[0].identifier)!"
                 }
-                self.classificationLabel = "Classification:\n" + descriptions.joined(separator: "\n")
+                else if topClassifications[0].confidence >= 0.7 {
+                    self.classificationLabel = "Likely \(topClassifications[0].identifier)."
+                }
+                else {
+                    self.classificationLabel = "Maybe \(topClassifications[0].identifier)...\n  or \(topClassifications[1].identifier)"
+                }
+                
+                self.isSearchable = true
+                self.classificationMeatPart = MeatPart(rawValue: topClassifications[0].identifier)!
             }
         }
     }
