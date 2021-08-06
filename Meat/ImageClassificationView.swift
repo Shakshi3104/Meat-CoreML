@@ -15,6 +15,8 @@ struct ImageClassificationView: View {
     // image classifier
     @ObservedObject var classification = ImageClassification()
     
+    @ObservedObject var rakutenRecipeSearcher = RakutenRecipeSearcher()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             // display the image
@@ -34,14 +36,30 @@ struct ImageClassificationView: View {
             }
             
             VStack {
-                // display the classification result
-                Text(classification.classificationLabel)
-                    .padding(20)
-                    .foregroundColor(.black)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.secondary)
-                        )
+                HStack {
+                    // display the classification result
+                    Text(classification.classificationLabel)
+                        .foregroundColor(.black)
+                        
+                    
+                    if classification.isSearchable {
+                        Button(action: {
+                            print("Searching...")
+                            rakutenRecipeSearcher.search(categoryID: self.classification.classificationMeatPart.rakutenRecipeCategoryID)
+                        }, label: {
+                            Image(systemName: "magnifyingglass")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .padding(5)
+                        })
+                    }
+                }
+                .padding(20)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.secondary)
+                    )
             
                 // select camera or photo library
                 Menu {
@@ -123,5 +141,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 struct ImageClassificationView_Previews: PreviewProvider {
     static var previews: some View {
         ImageClassificationView()
+            .colorScheme(.dark)
     }
 }

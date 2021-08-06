@@ -14,6 +14,8 @@ import Vision
 // MARK: - Image Classification
 class ImageClassification: ObservableObject {
     @Published var classificationLabel: String = "Add a photo."
+    @Published var isSearchable: Bool = false
+    var classificationMeatPart: MeatPart = .gyu_harami
     
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -89,6 +91,7 @@ class ImageClassification: ObservableObject {
                 
                 self.isSearchable = true
                 self.classificationMeatPart = MeatPart(rawValue: topClassifications[0].identifier)!
+                print("\(self.classificationMeatPart.rakutenRecipeCategoryID)")
             }
         }
     }
