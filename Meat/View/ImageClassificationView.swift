@@ -16,8 +16,6 @@ struct ImageClassificationView: View {
     // image classifier
     @ObservedObject var classification = ImageClassification()
     
-    @ObservedObject var rakutenRecipeSearcher = RakutenRecipeSearcher()
-    
     var body: some View {
         ZStack(alignment: .bottom) {
             // display the image
@@ -45,8 +43,6 @@ struct ImageClassificationView: View {
                     
                     if classification.isSearchable {
                         Button(action: {
-                            print("🥩 Searching...")
-                            rakutenRecipeSearcher.search(categoryID: self.classification.classificationMeatPart.rakutenRecipeCategoryID)
                             self.isPresentedRecipe.toggle()
                         }, label: {
                             Image(systemName: "magnifyingglass")
@@ -56,7 +52,7 @@ struct ImageClassificationView: View {
                                 .padding(5)
                         })
                         .sheet(isPresented: $isPresentedRecipe, content: {
-                            Text(rakutenRecipeSearcher.firstRakutenRecipeItem.recipeTitle)
+                            RecipeView(meatPart: self.classification.classificationMeatPart)
                         })
                     }
                 }
