@@ -77,7 +77,7 @@ class ImageClassification: ObservableObject {
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(2)
                 
-                print("\(topClassifications[0].identifier) \(topClassifications[0].confidence)")
+                print("🥩 \(topClassifications[0].identifier) \(topClassifications[0].confidence)")
                 
                 if topClassifications[0].confidence >= 0.9 {
                     self.classificationLabel = "It is \(topClassifications[0].identifier)!"
@@ -91,7 +91,7 @@ class ImageClassification: ObservableObject {
                 
                 self.isSearchable = true
                 self.classificationMeatPart = MeatPart(rawValue: topClassifications[0].identifier)!
-                print("\(self.classificationMeatPart.rakutenRecipeCategoryID)")
+                print("🥩 \(self.classificationMeatPart.name) \(self.classificationMeatPart.rakutenRecipeCategoryID)")
             }
         }
     }

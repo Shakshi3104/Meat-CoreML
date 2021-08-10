@@ -45,7 +45,7 @@ struct ImageClassificationView: View {
                     
                     if classification.isSearchable {
                         Button(action: {
-                            print("Searching...")
+                            print("🥩 Searching...")
                             rakutenRecipeSearcher.search(categoryID: self.classification.classificationMeatPart.rakutenRecipeCategoryID)
                             self.isPresentedRecipe.toggle()
                         }, label: {

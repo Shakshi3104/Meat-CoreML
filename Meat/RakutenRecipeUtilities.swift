@@ -41,7 +41,7 @@ class RakutenRecipeSearcher: ObservableObject {
                             let recipeTitle = recipe["recipeTitle"] as! String
                             let recipeUrl = recipe["recipeUrl"] as! String
                             let foodImageUrl = recipe["foodImageUrl"] as! String
-                            print("\(recipeTitle) \(recipeUrl) \(foodImageUrl)")
+                            print("🥩 \(recipeTitle) \(recipeUrl) \(foodImageUrl)")
                             
                             let recipeItem = RakutenRecipeItem(recipeTitle: recipeTitle, recipeUrl: recipeUrl, foodImageUrl: foodImageUrl)
                             
