@@ -15,7 +15,6 @@
 		CE484A34269AA5C900291EA3 /* ImageClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE484A33269AA5C900291EA3 /* ImageClassification.swift */; };
 		CE484A36269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */; };
-		CEBAE0F8269ABFF4002FADAF /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBAE0F7269ABFF4002FADAF /* screenshots.png */; };
 		CEC9624D26BD07DD00B05524 /* MeatPartUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */; };
 		CEC9624F26BD110900B05524 /* RakutenRecipeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624E26BD110900B05524 /* RakutenRecipeUtilities.swift */; };
 		CED0F87F26C233C6008A0275 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0F87E26C233C6008A0275 /* RecipeView.swift */; };
@@ -34,11 +33,11 @@
 		CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		CE484A39269AB2E600291EA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RawMeatClassifier.mlmodel; sourceTree = "<group>"; };
-		CEBAE0F7269ABFF4002FADAF /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
 		CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatPartUtilities.swift; sourceTree = "<group>"; };
 		CEC9624E26BD110900B05524 /* RakutenRecipeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenRecipeUtilities.swift; sourceTree = "<group>"; };
 		CED0F87E26C233C6008A0275 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		CED0F88026C2400D008A0275 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		CED0F88226C2440A008A0275 /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +54,7 @@
 		CE484A16269A95A000291EA3 = {
 			isa = PBXGroup;
 			children = (
-				CEBAE0F7269ABFF4002FADAF /* screenshots.png */,
+				CED0F88226C2440A008A0275 /* screenshots.png */,
 				CE484A39269AB2E600291EA3 /* README.md */,
 				CE484A21269A95A000291EA3 /* Meat */,
 				CE484A20269A95A000291EA3 /* Products */,
@@ -179,7 +178,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBAE0F8269ABFF4002FADAF /* screenshots.png in Resources */,
 				CE484A2A269A95A100291EA3 /* Preview Assets.xcassets in Resources */,
 				CE484A27269A95A100291EA3 /* Assets.xcassets in Resources */,
 			);
