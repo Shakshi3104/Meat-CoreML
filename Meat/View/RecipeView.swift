@@ -10,21 +10,22 @@ import WebKit
 
 struct RecipeView: View {
     @State var meatPart: MeatPart
+    @ObservedObject var rakutenRecipeSearcher: RakutenRecipeSearcher
     
-    private let dummyRecipes: [RakutenRecipeItem] = [
-        RakutenRecipeItem(recipeTitle: "焼肉", recipeUrl: "https://www.yakiniku.jp/sakai/", foodImageUrl: "https://www.yakiniku.jp/sakai/wp-content/uploads/2018/07/1450_1200_topimage_01.png")
-    ]
+    init(meatPart: MeatPart) {
+        self.meatPart = meatPart
+        self.rakutenRecipeSearcher = RakutenRecipeSearcher(categoryID: meatPart.rakutenRecipeCategoryID)
+    }
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(self.dummyRecipes) { recipe in
+                ForEach(self.rakutenRecipeSearcher.rakutenRecipeItems) { recipe in
                     NavigationLink(
                         destination: WebView(loadUrl: recipe.recipeUrl),
                         label: {
                             HStack {
-                                Image("yakiniku")
-                                    .resizable()
+                                URLImage(url: recipe.foodImageUrl)
                                     .scaledToFill()
                                     .frame(width:100, height: 100, alignment: .center)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -33,11 +34,10 @@ struct RecipeView: View {
                             }
                             .padding(.vertical, 5.0)
                         })
-                    
-                    
                 }
             }
             .listStyle(InsetGroupedListStyle())
+            .navigationTitle("\(self.meatPart.name) recipes")
         }
     }
 }

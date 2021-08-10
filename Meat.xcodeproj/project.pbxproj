@@ -19,6 +19,7 @@
 		CEC9624D26BD07DD00B05524 /* MeatPartUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */; };
 		CEC9624F26BD110900B05524 /* RakutenRecipeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624E26BD110900B05524 /* RakutenRecipeUtilities.swift */; };
 		CED0F87F26C233C6008A0275 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0F87E26C233C6008A0275 /* RecipeView.swift */; };
+		CED0F88126C2400D008A0275 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0F88026C2400D008A0275 /* ImageDownload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CEC9624C26BD07DD00B05524 /* MeatPartUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatPartUtilities.swift; sourceTree = "<group>"; };
 		CEC9624E26BD110900B05524 /* RakutenRecipeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenRecipeUtilities.swift; sourceTree = "<group>"; };
 		CED0F87E26C233C6008A0275 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		CED0F88026C2400D008A0275 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				CE484A24269A95A000291EA3 /* ContentView.swift */,
 				CE484A31269A962800291EA3 /* ImageClassificationView.swift */,
 				CED0F87E26C233C6008A0275 /* RecipeView.swift */,
+				CED0F88026C2400D008A0275 /* ImageDownload.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				CEC9624D26BD07DD00B05524 /* MeatPartUtilities.swift in Sources */,
 				CE484A23269A95A000291EA3 /* MeatApp.swift in Sources */,
 				CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */,
+				CED0F88126C2400D008A0275 /* ImageDownload.swift in Sources */,
 				CEC9624F26BD110900B05524 /* RakutenRecipeUtilities.swift in Sources */,
 				CE484A32269A962800291EA3 /* ImageClassificationView.swift in Sources */,
 				CE484A34269AA5C900291EA3 /* ImageClassification.swift in Sources */,
