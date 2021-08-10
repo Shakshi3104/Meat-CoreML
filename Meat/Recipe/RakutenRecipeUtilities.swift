@@ -8,10 +8,11 @@
 import Foundation
 
 
-struct RakutenRecipeItem {
+struct RakutenRecipeItem: Identifiable {
     let recipeTitle: String
     let recipeUrl: String
     let foodImageUrl: String
+    var id = UUID()
 }
 
 
