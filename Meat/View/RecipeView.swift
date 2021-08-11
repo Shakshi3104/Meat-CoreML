@@ -22,10 +22,10 @@ struct RecipeView: View {
             List {
                 ForEach(self.rakutenRecipeSearcher.rakutenRecipeItems) { recipe in
                     NavigationLink(
-                        destination: WebView(loadUrl: recipe.recipeUrl),
+                        destination: WebView(loadUrl: recipe.recipeURL),
                         label: {
                             HStack {
-                                URLImage(url: recipe.foodImageUrl)
+                                URLImage(url: recipe.foodImageURL)
                                     .scaledToFill()
                                     .frame(width:100, height: 100, alignment: .center)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))

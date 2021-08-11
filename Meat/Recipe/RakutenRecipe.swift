@@ -10,8 +10,8 @@ import Foundation
 
 struct RakutenRecipeItem: Identifiable {
     let recipeTitle: String
-    let recipeUrl: String
-    let foodImageUrl: String
+    let recipeURL: String
+    let foodImageURL: String
     var id = UUID()
 }
 
@@ -47,7 +47,7 @@ class RakutenRecipeSearcher: ObservableObject {
                             let foodImageUrl = recipe["foodImageUrl"] as! String
                             print("🥩 \(recipeTitle) \(recipeUrl) \(foodImageUrl)")
                             
-                            let recipeItem = RakutenRecipeItem(recipeTitle: recipeTitle, recipeUrl: recipeUrl, foodImageUrl: foodImageUrl)
+                            let recipeItem = RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: foodImageUrl)
                             
                             DispatchQueue.main.async {
                                 self.rakutenRecipeItems.append(recipeItem)
