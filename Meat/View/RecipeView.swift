@@ -14,7 +14,15 @@ struct RecipeView: View {
     
     init(meatPart: MeatPart) {
         self.meatPart = meatPart
-        self.rakutenRecipeSearcher = RakutenRecipeSearcher(categoryID: meatPart.rakutenRecipeCategoryID)
+        
+        // Determine if it is in yakiniku mode
+        let isYakinikuMode = UserDefaults.standard.bool(forKey: "yakiniku_mode")
+        print("🥩 yakiniku mode: \(isYakinikuMode)")
+        if isYakinikuMode {
+        self.rakutenRecipeSearcher = RakutenRecipeSearcher(meatPart: meatPart)
+        } else {
+            self.rakutenRecipeSearcher = RakutenRecipeSearcher(categoryID: meatPart.rakutenRecipeCategoryID)
+        }
     }
     
     var body: some View {
