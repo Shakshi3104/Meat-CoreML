@@ -15,7 +15,11 @@
 		CE484A34269AA5C900291EA3 /* ImageClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE484A33269AA5C900291EA3 /* ImageClassification.swift */; };
 		CE484A36269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */; };
-		CEBAE0F8269ABFF4002FADAF /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBAE0F7269ABFF4002FADAF /* screenshots.png */; };
+		CEC9624D26BD07DD00B05524 /* MeatPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624C26BD07DD00B05524 /* MeatPart.swift */; };
+		CEC9624F26BD110900B05524 /* RakutenRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9624E26BD110900B05524 /* RakutenRecipe.swift */; };
+		CED0F87F26C233C6008A0275 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0F87E26C233C6008A0275 /* RecipeView.swift */; };
+		CED0F88126C2400D008A0275 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0F88026C2400D008A0275 /* ImageDownload.swift */; };
+		CEE45EC826C3A8050010D138 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEE45EC726C3A8050010D138 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +34,12 @@
 		CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		CE484A39269AB2E600291EA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RawMeatClassifier.mlmodel; sourceTree = "<group>"; };
-		CEBAE0F7269ABFF4002FADAF /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
+		CEC9624C26BD07DD00B05524 /* MeatPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatPart.swift; sourceTree = "<group>"; };
+		CEC9624E26BD110900B05524 /* RakutenRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenRecipe.swift; sourceTree = "<group>"; };
+		CED0F87E26C233C6008A0275 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		CED0F88026C2400D008A0275 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		CED0F88226C2440A008A0275 /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
+		CEE45EC726C3A8050010D138 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +56,7 @@
 		CE484A16269A95A000291EA3 = {
 			isa = PBXGroup;
 			children = (
-				CEBAE0F7269ABFF4002FADAF /* screenshots.png */,
+				CED0F88226C2440A008A0275 /* screenshots.png */,
 				CE484A39269AB2E600291EA3 /* README.md */,
 				CE484A21269A95A000291EA3 /* Meat */,
 				CE484A20269A95A000291EA3 /* Products */,
@@ -65,15 +74,14 @@
 		CE484A21269A95A000291EA3 /* Meat */ = {
 			isa = PBXGroup;
 			children = (
-				CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */,
+				CED0F87D26C23308008A0275 /* Recipe */,
+				CED0F87C26C232F4008A0275 /* Classification */,
+				CED0F87B26C232E5008A0275 /* View */,
 				CE484A22269A95A000291EA3 /* MeatApp.swift */,
 				CE484A26269A95A100291EA3 /* Assets.xcassets */,
 				CE484A2B269A95A100291EA3 /* Info.plist */,
 				CE484A28269A95A100291EA3 /* Preview Content */,
-				CE484A24269A95A000291EA3 /* ContentView.swift */,
-				CE484A31269A962800291EA3 /* ImageClassificationView.swift */,
-				CE484A33269AA5C900291EA3 /* ImageClassification.swift */,
-				CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				CEE45EC726C3A8050010D138 /* Settings.bundle */,
 			);
 			path = Meat;
 			sourceTree = "<group>";
@@ -84,6 +92,36 @@
 				CE484A29269A95A100291EA3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CED0F87B26C232E5008A0275 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE484A24269A95A000291EA3 /* ContentView.swift */,
+				CE484A31269A962800291EA3 /* ImageClassificationView.swift */,
+				CED0F87E26C233C6008A0275 /* RecipeView.swift */,
+				CED0F88026C2400D008A0275 /* ImageDownload.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CED0F87C26C232F4008A0275 /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */,
+				CE484A33269AA5C900291EA3 /* ImageClassification.swift */,
+				CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		CED0F87D26C23308008A0275 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9624C26BD07DD00B05524 /* MeatPart.swift */,
+				CEC9624E26BD110900B05524 /* RakutenRecipe.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBAE0F8269ABFF4002FADAF /* screenshots.png in Resources */,
 				CE484A2A269A95A100291EA3 /* Preview Assets.xcassets in Resources */,
+				CEE45EC826C3A8050010D138 /* Settings.bundle in Resources */,
 				CE484A27269A95A100291EA3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED0F87F26C233C6008A0275 /* RecipeView.swift in Sources */,
 				CE484A25269A95A000291EA3 /* ContentView.swift in Sources */,
+				CEC9624D26BD07DD00B05524 /* MeatPart.swift in Sources */,
 				CE484A23269A95A000291EA3 /* MeatApp.swift in Sources */,
 				CEBAE0F6269ABD42002FADAF /* RawMeatClassifier.mlmodel in Sources */,
+				CED0F88126C2400D008A0275 /* ImageDownload.swift in Sources */,
+				CEC9624F26BD110900B05524 /* RakutenRecipe.swift in Sources */,
 				CE484A32269A962800291EA3 /* ImageClassificationView.swift in Sources */,
 				CE484A34269AA5C900291EA3 /* ImageClassification.swift in Sources */,
 				CE484A36269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
