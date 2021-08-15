@@ -38,27 +38,27 @@ class RakutenRecipeSearcher: ObservableObject {
     // initializer for `Yakiniku` mode
     init(meatPart: MeatPart) {
         let recipeTitle = "焼肉"
-        let recipeUrl = getRandomYakinikuRestaurantURL()
+        let recipeURL = getRandomYakinikuRestaurantURL()
         let recipe: RakutenRecipeItem = {
             switch meatPart {
             case .gyu_harami:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://cdn.macaro-ni.jp/assets/img/shutterstock/shutterstock_316787414.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://cdn.macaro-ni.jp/assets/img/shutterstock/shutterstock_316787414.jpg")
             case .gyu_kara_roast:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://shop25-makeshop.akamaized.net/shopimages/takefuku/000000000258_1_vcuCbxS.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://shop25-makeshop.akamaized.net/shopimages/takefuku/000000000258_1_vcuCbxS.jpg")
             case .gyu_tongue:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://static.retrip.jp/article/55875/images/55875db1afa2d-968d-4710-975c-e91d71cad566_l.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://static.retrip.jp/article/55875/images/55875db1afa2d-968d-4710-975c-e91d71cad566_l.jpg")
             case .sankaku_bara:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://img.furusato-tax.jp/cdn-cgi/image/width=520,height=323/img/x/product/details/20200722/sd2_65ce214a6751b539a90b3c0846c0c2f1db48f9a7.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://img.furusato-tax.jp/cdn-cgi/image/width=520,height=323/img/x/product/details/20200722/sd2_65ce214a6751b539a90b3c0846c0c2f1db48f9a7.jpg")
             case .sasami:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://main-dish.com/wp-content/uploads/sites/3/2015/07/sasami4.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://main-dish.com/wp-content/uploads/sites/3/2015/07/sasami4.jpg")
             case .seseri:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://kinarino.k-img.com/system/press_images/001/327/569/fac4fbb5ed582c05e94a1db71cc809ccfb756136.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://kinarino.k-img.com/system/press_images/001/327/569/fac4fbb5ed582c05e94a1db71cc809ccfb756136.jpg")
             case .sunagimo:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://sendai.tokiwatei.com/dainohara/files/2013/06/20130622_1.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://sendai.tokiwatei.com/dainohara/files/2013/06/20130622_1.jpg")
             case .tori_liver:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://img2.mypl.net/image.php?id=1844022&p=shopn&s=490_740&op=")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://img2.mypl.net/image.php?id=1844022&p=shopn&s=490_740&op=")
             case .tori_momo:
-                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: "https://letronc-s3.akamaized.net/items/images/1332490/large/mini_magick20180516-10969-1iqswaj.jpg")
+                return RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: "https://letronc-s3.akamaized.net/items/images/1332490/large/mini_magick20180516-10969-1iqswaj.jpg")
             }
         }()
         
@@ -84,11 +84,11 @@ class RakutenRecipeSearcher: ObservableObject {
                     if let recipeArray = recipeArrayOptional {
                         for recipe in recipeArray {
                             let recipeTitle = recipe["recipeTitle"] as! String
-                            let recipeUrl = recipe["recipeUrl"] as! String
-                            let foodImageUrl = recipe["foodImageUrl"] as! String
-                            print("🥩 \(recipeTitle) \(recipeUrl) \(foodImageUrl)")
+                            let recipeURL = recipe["recipeUrl"] as! String
+                            let foodImageURL = recipe["foodImageUrl"] as! String
+                            print("🥩 \(recipeTitle) \(recipeURL) \(foodImageURL)")
                             
-                            let recipeItem = RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeUrl, foodImageURL: foodImageUrl)
+                            let recipeItem = RakutenRecipeItem(recipeTitle: recipeTitle, recipeURL: recipeURL, foodImageURL: foodImageURL)
                             
                             DispatchQueue.main.async {
                                 self.rakutenRecipeItems.append(recipeItem)
