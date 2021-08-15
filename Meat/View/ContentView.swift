@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Vision+ML SwiftUI
+//  Meat
 //
 //  Created by MacBook Pro on 2021/07/11.
 //

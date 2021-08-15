@@ -1,10 +1,3 @@
-//
-//  ImageClassification.swift
-//  Vision+ML SwiftUI
-//
-//  Created by MacBook Pro on 2021/07/11.
-//
-
 import Foundation
 import UIKit
 import ImageIO
@@ -20,11 +13,6 @@ class ImageClassification: ObservableObject {
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            /*
-             Use the Swift class `MobileNet` Core ML generates from the model.
-             To use a different Core ML classifier model, add it to the project
-             and replace `MobileNet` with that model's generated Swift class.
-             */
             let modelURL = Bundle.main.url(forResource: "RawMeatClassifier", withExtension: "mlmodelc")!
             let model = try VNCoreMLModel(for: RawMeatClassifier(contentsOf: modelURL).model)
             

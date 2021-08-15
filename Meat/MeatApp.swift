@@ -1,6 +1,6 @@
 //
-//  Vision_ML_SwiftUIApp.swift
-//  Vision+ML SwiftUI
+//  MeatApp.swift
+//  Meat
 //
 //  Created by MacBook Pro on 2021/07/11.
 //
