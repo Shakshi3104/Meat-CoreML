@@ -30,7 +30,7 @@ struct RecipeView: View {
             List {
                 ForEach(self.rakutenRecipeSearcher.rakutenRecipeItems) { recipe in
                     NavigationLink(
-                        destination: WebView(loadUrl: recipe.recipeURL),
+                        destination: WebView(loadURL: recipe.recipeURL),
                         label: {
                             HStack {
                                 URLImage(url: recipe.foodImageURL)
@@ -53,14 +53,14 @@ struct RecipeView: View {
 // MARK:- WebView
 /// https://qiita.com/wiii_na/items/36123cf901839a8038e2
 struct WebView: UIViewRepresentable {
-    var loadUrl:String
+    var loadURL:String
 
     func makeUIView(context: Context) -> WKWebView {
         return WKWebView()
     }
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.load(URLRequest(url: URL(string: loadUrl)!))
+        uiView.load(URLRequest(url: URL(string: loadURL)!))
     }
 }
 
