@@ -73,7 +73,10 @@ struct RecipeDetailView: View {
                 }
             })
             .sheet(isPresented: $isSharedPresented, content: {
-                ActivityView(activityItems: [URL(string: recipe.recipeURL)!, "Meatで\(meatPart.japaneseName)を使ったレシピを検索しました"], applicationActivities: nil)
+                ActivityView(activityItems: [
+                    "Meatで\(meatPart.japaneseName)を使ったレシピを検索しました",
+                    URL(string: recipe.recipeURL)!
+                ], applicationActivities: nil)
             })
     }
 }
