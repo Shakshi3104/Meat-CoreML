@@ -30,7 +30,7 @@ struct RecipeView: View {
             List {
                 ForEach(self.rakutenRecipeSearcher.rakutenRecipeItems) { recipe in
                     NavigationLink(
-                        destination: RecipeDetailView(recipeURL: recipe.recipeURL),
+                        destination: RecipeDetailView(recipe: recipe, meatPart: meatPart),
                         label: {
                             HStack {
                                 URLImage(url: recipe.foodImageURL)
@@ -53,12 +53,13 @@ struct RecipeView: View {
 // MARK:- Recipe Detail View
 /// WebView + Share button
 struct RecipeDetailView: View {
-    var recipeURL: String
+    var recipe: RakutenRecipeItem
+    var meatPart: MeatPart
     
     @State private var isSharedPresented = false
     
     var body: some View {
-        WebView(loadURL: recipeURL)
+        WebView(loadURL: recipe.recipeURL)
             .toolbar(content: {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
@@ -69,7 +70,7 @@ struct RecipeDetailView: View {
                 }
             })
             .sheet(isPresented: $isSharedPresented, content: {
-                ActivityView(activityItems: [URL(string: recipeURL)!], applicationActivities: nil)
+                ActivityView(activityItems: [URL(string: recipe.recipeURL)!, "Meatで\(meatPart.japaneseName)を使ったレシピを検索しました"], applicationActivities: nil)
             })
     }
 }

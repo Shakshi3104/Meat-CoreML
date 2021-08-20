@@ -42,4 +42,27 @@ enum MeatPart: String, CaseIterable {
             return "10-277-518"
     }
     }
+    /// Japanese meat part name
+    var japaneseName: String {
+        switch self {
+        case .gyu_tongue:
+            return "牛タン"
+        case .gyu_harami:
+            return "牛ハラミ"
+        case .gyu_kara_roast:
+            return "牛肩ロース"
+        case .sankaku_bara:
+            return "牛三角バラ"
+        case .sasami:
+            return "ささみ"
+        case .seseri:
+            return "せせり"
+        case .tori_liver:
+            return "鶏レバー"
+        case .tori_momo:
+            return "鶏もも"
+        case .sunagimo:
+            return "砂肝"
+        }
+    }
 }
