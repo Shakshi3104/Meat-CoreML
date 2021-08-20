@@ -64,6 +64,9 @@ struct RecipeDetailView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
                         self.isSharedPresented.toggle()
+                        
+                        let switchFeedback = UIImpactFeedbackGenerator(style: .medium)
+                        switchFeedback.impactOccurred()
                     }) {
                         Image(systemName: "square.and.arrow.up")
                     }

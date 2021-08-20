@@ -44,6 +44,8 @@ struct ImageClassificationView: View {
                     if classification.isSearchable {
                         Button(action: {
                             self.isPresentedRecipe.toggle()
+                            let switchFeedback = UIImpactFeedbackGenerator(style: .medium)
+                            switchFeedback.impactOccurred()
                         }, label: {
                             Image(systemName: "magnifyingglass")
                                 .resizable()
