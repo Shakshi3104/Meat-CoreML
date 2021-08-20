@@ -30,7 +30,7 @@ struct RecipeView: View {
             List {
                 ForEach(self.rakutenRecipeSearcher.rakutenRecipeItems) { recipe in
                     NavigationLink(
-                        destination: WebView(loadURL: recipe.recipeURL),
+                        destination: RecipeDetailView(recipeURL: recipe.recipeURL),
                         label: {
                             HStack {
                                 URLImage(url: recipe.foodImageURL)
@@ -50,6 +50,30 @@ struct RecipeView: View {
     }
 }
 
+// MARK:- Recipe Detail View
+/// WebView + Share button
+struct RecipeDetailView: View {
+    var recipeURL: String
+    
+    @State private var isSharedPresented = false
+    
+    var body: some View {
+        WebView(loadURL: recipeURL)
+            .toolbar(content: {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        self.isSharedPresented.toggle()
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                }
+            })
+            .sheet(isPresented: $isSharedPresented, content: {
+                ActivityView(activityItems: [URL(string: recipeURL)!], applicationActivities: nil)
+            })
+    }
+}
+
 // MARK:- WebView
 /// https://qiita.com/wiii_na/items/36123cf901839a8038e2
 struct WebView: UIViewRepresentable {
@@ -61,6 +85,20 @@ struct WebView: UIViewRepresentable {
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.load(URLRequest(url: URL(string: loadURL)!))
+    }
+}
+
+// MARK:- ActivityView
+struct ActivityView: UIViewControllerRepresentable {
+    let activityItems: [Any]
+    let applicationActivities: [UIActivity]?
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>) {
+        // Nothing to do
     }
 }
 
