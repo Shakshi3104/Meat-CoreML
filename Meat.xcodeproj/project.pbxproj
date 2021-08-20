@@ -33,12 +33,12 @@
 		CE484A33269AA5C900291EA3 /* ImageClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassification.swift; sourceTree = "<group>"; };
 		CE484A35269AA69100291EA3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		CE484A39269AB2E600291EA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE599C7C26CF84A400914705 /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
 		CEBAE0F5269ABD41002FADAF /* RawMeatClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RawMeatClassifier.mlmodel; sourceTree = "<group>"; };
 		CEC9624C26BD07DD00B05524 /* MeatPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatPart.swift; sourceTree = "<group>"; };
 		CEC9624E26BD110900B05524 /* RakutenRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakutenRecipe.swift; sourceTree = "<group>"; };
 		CED0F87E26C233C6008A0275 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		CED0F88026C2400D008A0275 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
-		CED0F88226C2440A008A0275 /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
 		CEE45EC726C3A8050010D138 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 		CE484A16269A95A000291EA3 = {
 			isa = PBXGroup;
 			children = (
-				CED0F88226C2440A008A0275 /* screenshots.png */,
+				CE599C7C26CF84A400914705 /* screenshots.png */,
 				CE484A39269AB2E600291EA3 /* README.md */,
 				CE484A21269A95A000291EA3 /* Meat */,
 				CE484A20269A95A000291EA3 /* Products */,
