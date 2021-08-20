@@ -45,7 +45,7 @@ struct RecipeView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("\(self.meatPart.name) recipes")
+            .navigationTitle("\(self.meatPart.japaneseName)のレシピ")
         }
     }
 }
