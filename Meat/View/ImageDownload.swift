@@ -17,12 +17,12 @@ class ImageDownloader : ObservableObject {
 
         guard let imageURL = URL(string: url) else { return }
 
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: imageURL)
+        let task: URLSessionTask = URLSession.shared.dataTask(with: imageURL) { data, _, _ in
             DispatchQueue.main.async {
                 self.downloadData = data
             }
         }
+        task.resume()
     }
 }
 
